@@ -1,2 +1,23 @@
 ---
-message: "This node is using common data"
+# Settings below are for configuring code manager on PE master to use multiple git repos
+## NOTE: Make sure these settings are added to common especially when adding a 
+## replica or compiler otherwise file sync will fail because comde manager not configured on compiler.
+puppet_enterprise::profile::master::code_manager_auto_configure: true
+puppet_enterprise::profile::master::r10k_known_hosts:
+  - name: "github.com"
+    type: "ed25519"
+    key: "AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
+puppet_enterprise::master::code_manager::git_settings:
+  private-key: "/etc/puppetlabs/puppetserver/ssh/id-control-repo.ed25519"
+  repositories:
+    - remote: "git@github.com:trips4/control-scm.git"
+      #private-key: "/etc/puppetlabs/puppetserver/ssh/id-control-repo.ed25519"
+puppet_enterprise::master::code_manager::sources:
+  puppet:
+    remote: "git@github.com:trips4/control-scm.git"
+    prefix: false
+  # baseline:
+  #   remote: "git@github.com:trips4/baseline.git"
+  #   prefix: false
+
+#comply::scanner_source: 'https://lab1-scm01.triplo.psedemos.com:30303/assessor'
