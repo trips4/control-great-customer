@@ -1,0 +1,5 @@
+sce_linux::config:
+  profile: 'server'
+  level: '1'
+  only:
+    - 'ensure_noexec_option_set_on_vartmp_partition'
