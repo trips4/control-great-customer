@@ -26,3 +26,5 @@ mod 'puppet-firewalld', '5.1.0'
 mod 'puppet-logrotate', '9.0.0'
 mod 'puppet-systemd', '9.4.0'
 mod 'puppet-selinux', '5.0.0'
+
+mod 'benjaminrobertson-update_trusted_facts', '2.0.0'

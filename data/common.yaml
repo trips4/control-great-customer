@@ -16,9 +16,8 @@ puppet_enterprise::profile::master::r10k_known_hosts:
     key: "AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl"
 puppet_enterprise::master::code_manager::git_settings:
   private-key: "/etc/puppetlabs/puppetserver/ssh/id-control-repo.ed25519"
-  repositories:
-    - remote: "git@github.com:trips4/control-scm.git"
-      #private-key: "/etc/puppetlabs/puppetserver/ssh/id-control-repo.ed25519"
+  #repositories:
+  #  - remote: "git@github.com:trips4/control-scm.git"
 puppet_enterprise::master::code_manager::sources:
   puppet:
     remote: "git@github.com:trips4/control-scm.git"
