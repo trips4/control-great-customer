@@ -27,4 +27,13 @@ mod 'puppet-logrotate', '9.0.0'
 mod 'puppet-systemd', '9.4.0'
 mod 'puppet-selinux', '5.0.0'
 
-mod 'benjaminrobertson-update_trusted_facts', '2.0.0'
+## Comply Module and dependencies
+
+mod 'puppetlabs-comply', '3.6.0'
+mod 'puppet-archive', '8.1.0'
+#mod 'puppetlabs-stdlib', '9.7.0'
+mod 'puppetlabs-chocolatey', '8.0.3'
+mod 'puppetlabs-powershell', '6.1.0'
+mod 'puppetlabs-pwshlib', '2.0.0'
+#mod 'puppetlabs-inifile', '6.2.0'
+mod 'puppetlabs-ruby_task_helper', '1.0.0'
