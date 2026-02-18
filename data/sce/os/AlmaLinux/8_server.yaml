@@ -1,0 +1,17 @@
+lookup_options:
+  sce_linux::config:
+    merge:
+      strategy: deep
+
+profile::cis::sce::enforce: true
+
+sce_linux::regenerate_grub2_config: true
+sce_linux::set_grub2_password: true
+sce_linux::grub2_superuser: 'root'
+sce_linux::grub2_superuser_password: 'ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEANz1JWUOGQfhdOtnrrkeU7sa3KXSssrJyvEUaD6u3DC/YjRQydQvK7z7EtkTWJU0B0mpMwCEVa6OdzcZ+4r8xgC1ANEYijq7Lw2JQKE75GFg5ju7XimIJjDXB23c9JUvl3iv6tGYbDYl7Tt+Bg7ZeypuKDFiqCaucdSndsPHsBhmO8dHd0NlIe8xkwPICUhR1DbXhF2qVoeH1l0aLokR4VNTBF24WYf+uqlTHOWjI2ZmYDHHs7Zm9msrgHkPnHI1qeyxNMkYIazlYGmP2Q4rquAyUMxpzFh5yxoiD4i0/orW4+kGrSodVL645ezKTdJuDcUf4pZJtEBIixBor+eoopDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDGUiArMe11opSM7fUp1oK+gBD5QKaRSpIJnFWjN/u7C2gw]'
+lookup_options:
+  sce_linux::grub2_superuser_password:
+    convert_to: 'Sensitive'
+sce_linux::config:
+  profile: 'server'
+  level: '1'

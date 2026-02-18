@@ -1,0 +1,4 @@
+# Switch to make this set of controls apply to nodes that have a node.yaml present in the data/sce/nodes directory.
+# This is a more specific match than the default of applying to all nodes, and allows us to target these controls to specific nodes.
+
+profile::sce::enforce: false

@@ -1,7 +1,11 @@
-sce_linux::benchmark: 'cis'
-sce_linux::config:
-  profile: 'server'
-  level: '1'
-  only:
-    - 'ensure_aide_is_installed'
-    - 'ensure_filesystem_integrity_is_regularly_checked'
+profile::sudo_users::users:
+  trips4:
+    ensure: present
+    shell: '/bin/bash'
+    managehome: true
+    password: 'ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEApnxoqZUGn85DBVA5OMZspZum8HoMVkDqAwYmGK+BYjC3LBv/GybhN25cvbFFrv6X2ajwt6Cp0YQBudsPw5q4s7CNmlFSeKyMCdG5wM4oOEGwNbJ/Lswnfghkznl6288l0rRL8nz/0LmbZAMJdBFA2eM5OUeR8AwLTaH4L//BIWv0a2eaOcrmsctDJwm+HnhkCh1o6fIIwfvU8k7pN2anY8v4GOLZUeuBdSnoIuMHedt1AviE+CNfQaPMcpVKjMU8mQt1n7sdZAyUng6DiB/Mv8lcTpH2QvSN6Xwc5qbHHPxhvd5TjiOr0o4clcWPeUquH49eBlQKrARu+n0HaNciWTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBANDCGk2PYYPFTSZI/JavCEgBCNyw1z5eyBbE9Qgt/mtUGf]'
+  admin1:
+    ensure: present
+    shell: '/bin/bash'
+    managehome: true
+    password: 'ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEApnxoqZUGn85DBVA5OMZspZum8HoMVkDqAwYmGK+BYjC3LBv/GybhN25cvbFFrv6X2ajwt6Cp0YQBudsPw5q4s7CNmlFSeKyMCdG5wM4oOEGwNbJ/Lswnfghkznl6288l0rRL8nz/0LmbZAMJdBFA2eM5OUeR8AwLTaH4L//BIWv0a2eaOcrmsctDJwm+HnhkCh1o6fIIwfvU8k7pN2anY8v4GOLZUeuBdSnoIuMHedt1AviE+CNfQaPMcpVKjMU8mQt1n7sdZAyUng6DiB/Mv8lcTpH2QvSN6Xwc5qbHHPxhvd5TjiOr0o4clcWPeUquH49eBlQKrARu+n0HaNciWTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBANDCGk2PYYPFTSZI/JavCEgBCNyw1z5eyBbE9Qgt/mtUGf]'

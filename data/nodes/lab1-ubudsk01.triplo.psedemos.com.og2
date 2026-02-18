@@ -1,0 +1,27 @@
+sce_linux::benchmark: 'cis'
+sce_linux::manage_gnome: true
+sce_linux::regenerate_grub2_config: true
+sce_linux::set_grub2_password: true
+sce_linux::grub2_superuser: 'root'
+sce_linux::grub2_superuser_password: 'newpassword'
+lookup_options:
+  sce_linux::grub2_superuser_password:
+    convert_to: 'Sensitive'
+sce_linux::config:
+  only:
+    - 'ensure_gdm_login_banner_is_configured' #1.7.2 V2 CIS Audit Pass
+    - 'ensure_gdm_disable_user_list_option_is_enabled' #1.7.3 V2 CIS Audit Pass
+    - 'ensure_gdm_screen_locks_when_the_user_is_idle' #1.7.4 V2 CIS Audit Pass
+    - 'ensure_gdm_screen_locks_cannot_be_overridden' #1.7.5 V2 CIS Audit Pass
+    - 'ensure_gdm_autorun_never_is_enabled' #1.7.8 V2 CIS Audit Pass
+    - 'ensure_gdm_autorun_never_is_not_overridden' #1.7.9 V2 CIS Audit Fails
+    - 'ensure_autofs_services_are_not_in_use'
+    - 'ensure_aide_is_installed'
+    - 'ensure_bootloader_password_is_set'
+  control_configs:
+    ensure_gdm_login_banner_is_configured:
+      enable_banner_message: true
+      banner_message_text: "This is a monitored system. You need to not be here."
+    ensure_bootloader_password_is_set:
+      password_protect: false
+      replace_password_file: true
