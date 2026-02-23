@@ -6,8 +6,10 @@ class profile::sce (
   Boolean $enforce = false,
 ) {
   if $enforce {
-    if $facts['os']['family'] == 'Ubuntu' {
+    if $facts['os']['family'] == 'Ubuntu' or $facts['os']['family'] == 'RedHat' {
       include sce_linux
+      notify { "SCE Linux profile included because OS Family is ${facts['os']['family']}": }
     }
   }
+  notify { "SCE Linux profile included because OS Family is ${facts['os']['family']}": }
 }

@@ -1,0 +1,5 @@
+profile::cis::sce::enforce: false
+sce_linux::config:
+  control_configs:
+    ensure_sshd_access_is_configured:
+      allow_groups: ['sudo']

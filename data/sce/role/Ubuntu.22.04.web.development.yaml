@@ -1,0 +1,9 @@
+profile::cis::sce::enforce: true
+lookup_options:
+  sce_linux::config:
+    merge:
+      strategy: deep
+sce_linux::config:
+  ignore:
+     - 'ensure_auditing_for_processes_that_start_prior_to_auditd_is_enabled'# 6.3.1.3
+     - 'ensure_audit_backlog_limit_is_sufficient' # 6.3.1.4
