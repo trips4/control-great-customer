@@ -48,4 +48,8 @@ mod 'dsc-auditpolicydsc', '1.4.0-0-9'
 mod 'dsc-securitypolicydsc', '2.10.0-0-9'
 #mod 'puppetlabs-powershell', '6.1.0'
 
+mod 'bginfo',
+ git:    'git@github.com:trips4/bginfo.git',
+ branch: 'feature_install'
+
 
