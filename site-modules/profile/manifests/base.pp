@@ -10,6 +10,9 @@ class profile::base {
       }
       include profile::cis::assessor
     }
+    'windows': {
+      include profile::cis::assessor
+    }
     default: {
       fail("Unsupported kernel ${facts['kernel']}")
     }

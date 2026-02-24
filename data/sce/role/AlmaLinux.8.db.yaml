@@ -1,8 +1,4 @@
 profile::cis::sce::enforce: true
-lookup_options:
-  sce_linux::config:
-    merge:
-      strategy: deep
 sce_linux::config:
   ignore:
      - 'ensure_aide_is_installed' #6.1.1

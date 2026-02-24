@@ -27,14 +27,6 @@ mod 'puppet-logrotate', '9.0.0'
 mod 'puppet-systemd', '9.4.0'
 mod 'puppet-selinux', '5.0.0'
 
-mod 'puppetlabs-registry', '5.0.3'
-mod 'dsc-networkingdsc', '9.1.0-0-0'
-mod 'dsc-auditpolicydsc', '1.4.0-0-9'
-mod 'dsc-securitypolicydsc', '2.10.0-0-9'
-
-
-
-
 ## Comply Module and dependencies.  Comment out depends that were included prior.
 
 mod 'puppetlabs-comply', '3.6.0'
@@ -45,4 +37,15 @@ mod 'puppetlabs-powershell', '6.1.0'
 mod 'puppetlabs-pwshlib', '2.0.0'
 #mod 'puppetlabs-inifile', '6.2.0'
 mod 'puppetlabs-ruby_task_helper', '1.0.0'
+
+## Windows SCE Module and dependencies.  Comment out depends that were included prior.
+mod 'puppetlabs-sce_windows', '2.2.0'
+#mod 'puppetlabs-stdlib', '9.7.0'
+mod 'puppetlabs-registry', '5.0.3'
+mod 'dsc-networkingdsc', '9.1.0-0-0'
+#mod 'puppetlabs-pwshlib', '2.0.1'
+mod 'dsc-auditpolicydsc', '1.4.0-0-9'
+mod 'dsc-securitypolicydsc', '2.10.0-0-9'
+#mod 'puppetlabs-powershell', '6.1.0'
+
 

@@ -11,5 +11,14 @@ class profile::cis::sce (
       notify { "SCE Linux is enabled for CIS compliance on ${facts['os']['name']}" :
       }
     }
+    elsif $facts['os']['family'] == 'windows' {
+      include sce_windows
+      notify { "SCE Windows is enabled for CIS compliance on ${facts['os']['name']}" :
+      }
+    }
+    else {
+      notify { "SCE compliance enforcement is not supported on ${facts['os']['name']}" :
+      }
+    }
   }
 }

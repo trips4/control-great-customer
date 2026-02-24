@@ -8,7 +8,7 @@ class profile::cis::assessor {
     }
     class { 'comply':
       scanner_source     => 'https://lab1-scm01.triplo.psedemos.com:30303/assessor',
-      assessor_java_path => '<path to wher java is>',
+      #assessor_java_path => '<path to wher java is>',
     }
   }
   else {
