@@ -9,6 +9,7 @@ class profile::base {
         ensure => 'present',
       }
       include profile::cis::assessor
+      include profile::firewalld
     }
     'windows': {
       include profile::cis::assessor
