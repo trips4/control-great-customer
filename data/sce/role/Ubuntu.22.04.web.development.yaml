@@ -1,3 +1,6 @@
+classes:
+  - profile::firewalld
+
 profile::cis::sce::enforce: true
 lookup_options:
   sce_linux::config:
