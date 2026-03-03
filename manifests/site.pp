@@ -25,14 +25,13 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  require profile::base
+  class { 'profile::base': }
 
-  $classes = lookup('classes', Optional[Variant[String, Array[String]]], 'first', undef)
+  $classes = lookup('classes', Optional[Array[String]], 'unique', undef)
 
-  if $classes =~ String[1] {
+  if !empty($classes) {
     include $classes
-  } elsif $classes =~ Array[String[1], 1] {
-    $classes.unique.include
+    Class['profile::base'] -> Class[$classes]
   } else {
     notify { 'No classes found in hiera data': }
   }
