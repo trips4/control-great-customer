@@ -25,8 +25,15 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
-  include profile::base
+  require profile::base
+
+  $classes = lookup('classes', Optional[Variant[String, Array[String]]], 'first', undef)
+
+  if $classes =~ String[1] {
+    include $classes
+  } elsif $classes =~ Array[String[1], 1] {
+    $classes.unique.include
+  } else {
+    notify { 'No classes found in hiera data': }
+  }
 }
