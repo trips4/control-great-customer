@@ -1,6 +1,6 @@
 class profile::firewalld {
   service { 'firewalld':
-    ensure   => 'stopped',
+    ensure   => 'running',
     enable   => 'true',
     provider => 'systemd',
   }
