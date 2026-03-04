@@ -16,7 +16,7 @@ Facter.add(:my_role) do
       'db_server'
     else
       # You can choose something else here, like 'agent_only' or nil
-      'unknown'
+      'cmon'
     end
   end
 end
