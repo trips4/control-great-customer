@@ -1,7 +1,7 @@
 Facter.add(:my_role) do
   setcode do
-    trusted = Facter.value(:trusted)
-    certname = trusted.is_a?(Hash) ? trusted['certname'] : nil
-    certname
+    trusted = Facter.value('trusted')
+    certname = trusted.is_a?(Hash) ? trusted['certname'] : ''
+    certname.include?('winagt') ? 'my_win' : 'default_role'
   end
 end
