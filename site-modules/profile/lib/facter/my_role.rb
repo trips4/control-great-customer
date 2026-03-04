@@ -1,8 +1,12 @@
-
-# modules/site_facts/lib/facter/role.rb
-
 Facter.add(:my_role) do
   setcode do
-    'hello'
+    trusted = Facter.value(:trusted)
+    certname = trusted.is_a?(Hash) ? trusted['certname'] : nil
+
+    if certname && certname.include?('almagt')
+      'my_win'
+    else
+      'hello_goodbye'
+    end
   end
 end
