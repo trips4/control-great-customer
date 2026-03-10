@@ -30,12 +30,5 @@ node default {
   # Example:
   #   class { 'my_class': }
   include profile::base
+  
 }
-# class { 'profile::base': }
-# $classes = lookup('classes', Optional[Array[String]], 'unique', undef)
-# if !empty($classes) {
-#   include $classes
-#   Class['profile::base'] -> Class[$classes]
-# } else {
-#   notify { 'No classes found in hiera data': }
-# }
