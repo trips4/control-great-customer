@@ -30,5 +30,14 @@ node default {
   # Example:
   #   class { 'my_class': }
   include profile::base
-  
 }
+## The example below is how we can use a lookup to include classes from hiera data.
+## Also have setup a relationship in this example, completely optional.
+# class { 'profile::base': }
+# $classes = lookup('classes', Optional[Array[String]], 'unique', undef)
+# if !empty($classes) {
+#   include $classes
+#   Class['profile::base'] -> Class[$classes]
+# } else {
+#   notify { 'No classes found in hiera data': }
+# }
