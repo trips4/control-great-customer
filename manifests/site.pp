@@ -24,15 +24,11 @@ File { backup => false }
 # Puppet Enterprise console and External Node Classifiers (ENC's).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
+#
 node default {
-  class { 'profile::base': }
-
-  $classes = lookup('classes', Optional[Array[String]], 'unique', undef)
-
-  if !empty($classes) {
-    include $classes
-    Class['profile::base'] -> Class[$classes]
-  } else {
-    notify { 'No classes found in hiera data': }
-  }
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
+  include profile::base
+  
 }

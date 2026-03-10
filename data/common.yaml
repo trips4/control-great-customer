@@ -3,7 +3,7 @@
 ## NOTE: Make sure these settings are added to common especially when adding a 
 ## replica or compiler otherwise file sync will fail because comde manager not configured on compiler.
 
-pe_r10k::forge_settings::
+pe_r10k::forge_settings:
   authorization_token: 'Bearer c6502579d1ad716259525e3b78cbc29f0d9e333efec50311f097015726ac1c63'
   baseurl: https://forgeapi.puppet.com
 puppet_enterprise::master::code_manager::forge_settings:
