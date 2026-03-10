@@ -1,0 +1,32 @@
+#<repo>/.github/workflows/trigger-cd-pipeline.yml
+name: Trigger Puppet CD
+
+on: 
+    push:
+        branches:
+            - main
+            - feature*
+    pull_request:
+        types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+    forward-to-puppet-cd:
+        runs-on: self-hosted
+        environment: Lab
+        steps:
+            - name: Forward GitHub event to Puppet CD
+              env:
+                  # Use contexts to retrieve dynamic content from GitHub Events
+                  # Ref: https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
+                  # Obtain the webhook URL from CD console
+                  # e.g. https://cdpe.example.com:8000/github/push?apiToken=
+                  CD_WEBHOOK_URL: http://lab1-cd01.triplo.psedemos.com:8000/github/push?apiToken=
+                  # Token portion of the webhook URL
+                  # e.g. zczhz5cUTRfuZAMWNs9Z9zmlUUuBPW6e
+                  CD_TOKEN: aOjf7/6iySlR3BuDYXG8KWI/kP0qeM/Q
+                  EVENT_TYPE: ${{ github.event_name }}
+              run: |
+                  curl -X POST "${CD_WEBHOOK_URL}${CD_TOKEN}" \
+                    -H "Content-Type: application/json" \
+                    -H "X-GitHub-Event: $EVENT_TYPE" \
+                    -d '${{ toJson(github.event) }}' 
