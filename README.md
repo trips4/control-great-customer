@@ -121,4 +121,3 @@ Follow [GitHub's documentation](https://docs.github.com/en/github/creating-cloni
 ## Code Manager Setup
 
 If you use Puppet Enterprise see the official [documentation](https://puppet.com/docs/pe/latest/code_mgr.html) for enabling Code Manager.
-
