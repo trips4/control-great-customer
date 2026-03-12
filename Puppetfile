@@ -51,5 +51,3 @@ mod 'dsc-securitypolicydsc', '2.10.0-0-9'
 mod 'bginfo',
  git:    'git@github.com:trips4/bginfo.git',
  branch: 'feature_install'
-
-
