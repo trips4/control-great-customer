@@ -1,7 +1,7 @@
 class profile::cis::ubuntu::usb_disable {
   file { '/etc/modprobe.d/60-usb-storage.conf':
     ensure  => file,
-    content => "install usb_storage /bin/false\nblacklist usb_storage\n",
+    content => "install usb-storage /bin/false\nblacklist usb-storage\n",
     mode    => '0644',
   }
 
