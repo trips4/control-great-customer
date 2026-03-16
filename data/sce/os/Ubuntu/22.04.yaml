@@ -16,4 +16,6 @@ sce_linux::config:
 
   only:
     - 1.1.1.1
-    - 1.1.1.9 # Ensure usb-storage kernel module is not available
+    - 1.1.1.9   # Ensure usb-storage kernel module is not available.Managed via 'profile::cis::ubuntu::usb_disable'
+    - 1.1.2.1.1 # Ensure /tmp is tmpfs or a separate partition
+    - 1.1.2.2.4 # Ensure noexec option set on /dev/shm partition

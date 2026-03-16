@@ -1,3 +1,7 @@
+# @summary Disable the usb-storage kernel module (CIS 1.1.1.9)
+# @description
+#   Ensures usb-storage is disabled via modprobe configuration and unloads
+#   the module if it is currently loaded.
 class profile::cis::ubuntu::usb_disable {
   file { '/etc/modprobe.d/60-usb-storage.conf':
     ensure  => file,
