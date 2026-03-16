@@ -16,3 +16,4 @@ sce_linux::config:
 
   control_configs:
     - 1.1.1.1
+    - 1.1.1.9 # Ensure usb-storage kernel module is not available
