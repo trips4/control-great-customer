@@ -11,10 +11,9 @@ defaults:
 hierarchy:
   - name: "SCE Data"
     paths:
-      - "sce/role/%{os.name}.%{os.release.major}.%{trusted.extensions.pp_role}.%{trusted.extensions.pp_environment}.yaml"  # /sce/role/ubuntu.22.04.web.development.yaml
-      - "sce/role/%{os.name}.%{os.release.major}.%{trusted.extensions.pp_role}.yaml"                                       # /sce/role/ubuntu.22.04.web.yaml
+      #- "sce/role/%{os.name}.%{os.release.major}.%{trusted.extensions.pp_role}.%{trusted.extensions.pp_environment}.yaml"  # /sce/role/ubuntu.22.04.web.development.yaml
+      #- "sce/role/%{os.name}.%{os.release.major}.%{trusted.extensions.pp_role}.yaml"                                       # /sce/role/ubuntu.22.04.web.yaml
       - "sce/os/%{os.name}/%{os.release.major}.yaml"
-      - "role/%{org_role}.yaml"                                                                      # /sce/os/ubuntu/22.04.yaml
       - "sce/common.yaml"
   - name: "Yaml backend"
     paths:

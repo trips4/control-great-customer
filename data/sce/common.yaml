@@ -7,11 +7,11 @@ lookup_options:
       strategy: deep
 
 profile::cis::sce::enforce: false
+
 sce_linux::config:
   control_configs:
     ensure_sshd_access_is_configured:
       allow_groups: ['sudo']
-
 sce_windows::config:
   control_configs:
     ensure_enforce_password_history_is_set_to_24_or_more_passwords:
