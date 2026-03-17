@@ -15,7 +15,8 @@ sce_linux::config:
     # Ensure crontab is restricted to authorized users  
     2.4.1.8:
       purge_cron_deny: false
-      manage_cron_allow: false
+      manage_cron_allow: true
+      cron_allowlist: ['root','ubuntu']
 sce_windows::config:
   control_configs:
     ensure_enforce_password_history_is_set_to_24_or_more_passwords:
