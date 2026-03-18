@@ -1,6 +1,1 @@
-# Add SCE Controls here
-sce_linux::config:
-  ignore:
-    - 3.2.1     # Ensure dccp kernel module is not available
-    - 3.2.2     # Ensure tipc kernel module is not available
-    - 3.2.4     # Ensure sctp kernel module is not available
+{}
