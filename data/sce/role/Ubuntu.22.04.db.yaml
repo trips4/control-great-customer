@@ -1,1 +1,5 @@
-{}
+sce_linux::config:
+  ignore:
+    - 3.2.2     # Ensure tipc kernel module is not available. In CIS V2 this control is L2, but in V3 it is L1.
+    - 3.2.4     # Ensure sctp kernel module is not available. In CIS V2 this control is L2, but in V3 it is L1.
+    - 3.3.1     # Ensure ip forwarding is disabled. This is 3.3.1.2 in v3, but 3.3.1 in v2.
