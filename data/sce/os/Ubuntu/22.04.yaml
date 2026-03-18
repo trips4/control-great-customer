@@ -12,7 +12,7 @@ sce_linux::grub2_superuser_password: 'MyEncryptedPassword'
 # Add SCE Controls here
 sce_linux::config:
   profile: 'server'
-  level: '1'
+  level: '2'
 
   only:
     - 1.1.1.1
@@ -32,6 +32,6 @@ sce_linux::config:
     - 2.4.1.6   # Ensure permissions on /etc/cron.monthly are configured
     #- 2.4.1.8   # Ensure crontab is restricted to authorized users # Managed via 'profile::cis::crond_access' to satisfy v3 check.
     # Add SCE Controls here
-    - 3.2.1     # Ensure dccp kernel module is not available
+    - 3.2.1     # Ensure dccp kernel module is not available.  In CIS V2 this control is L2, but in V3 it is L1.
     # - 3.2.2     # Ensure tipc kernel module is not available
     # - 3.2.4     # Ensure sctp kernel module is not available
