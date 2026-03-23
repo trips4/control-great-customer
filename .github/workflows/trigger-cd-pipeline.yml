@@ -29,4 +29,4 @@ jobs:
                   curl -X POST "${CD_WEBHOOK_URL}${CD_TOKEN}" \
                     -H "Content-Type: application/json" \
                     -H "X-GitHub-Event: $EVENT_TYPE" \
-                    -d '${{ toJson(github.event) }}' 
+                    -d '${{ toJson(github.event) }}'
