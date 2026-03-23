@@ -13,6 +13,8 @@ sce_linux::config:
     ensure_sshd_access_is_configured:
       allow_groups: ['sudo']
 sce_windows::config:
+  profile: 'member_server' 
+  level: '1'
   control_configs:
     ensure_enforce_password_history_is_set_to_24_or_more_passwords:
       dsc_enforce_password_history: 24
