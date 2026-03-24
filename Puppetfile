@@ -34,7 +34,7 @@ mod 'puppet-archive', '8.1.0'
 #mod 'puppetlabs-stdlib', '9.7.0'
 mod 'puppetlabs-chocolatey', '8.0.3'
 mod 'puppetlabs-powershell', '6.1.0'
-mod 'puppetlabs-pwshlib', '1.2.3' #Downgraded from 2.0.0 to try to fix sce_windows
+mod 'puppetlabs-pwshlib', '1.2.3'
 #mod 'puppetlabs-inifile', '6.2.0'
 mod 'puppetlabs-ruby_task_helper', '1.0.0'
 
