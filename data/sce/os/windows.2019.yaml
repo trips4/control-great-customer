@@ -8,4 +8,8 @@ sce_windows::config:
     - 'ensure_store_passwords_using_reversible_encryption_is_disabled' #1.1.6
     - 'ensure_account_lockout_threshold_is_set_to_5_or_fewer_invalid_logon_attempts_but_not_0' #1.2.2
     - 'ensure_access_this_computer_from_the_network__is_set_to_administrators_authenticated_users_ms_only' #2.2.3
-    
+    - 'ensure_allow_log_on_locally_is_set_to_administrators_ms_only' #2.2.8
+    - 'ensure_back_up_files_and_directories_is_set_to_administrators' #2.2.11
+    - 'ensure_deny_access_to_this_computer_from_the_network_to_include_guests_local_account_and_member_of_administrators_group_ms_only' #2.2.22
+    - 'ensure_deny_log_on_as_a_batch_job_to_include_guests' #2.2.23
+
