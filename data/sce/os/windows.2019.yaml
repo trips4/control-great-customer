@@ -1,6 +1,4 @@
 sce_windows::config: 
-  profile: 'member_server' 
-  level: '1' 
   only: 
     - 'ensure_enforce_password_history_is_set_to_24_or_more_passwords' #1.1.1
     - 'ensure_maximum_password_age_is_set_to_365_or_fewer_days_but_not_0' #1.1.2
