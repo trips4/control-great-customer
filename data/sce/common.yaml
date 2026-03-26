@@ -16,5 +16,5 @@ sce_windows::config:
   profile: 'member_server' 
   level: '1'
   control_configs:
-    'ensure_deny_log_on_through_remote_desktop_services_is_set_to_guests_local_account_ms_only':
-      users: ['Builtin\\Guests']
+    ensure_deny_log_on_through_remote_desktop_services_is_set_to_guests_local_account_ms_only:
+      users: ["Builtin\\Guests"]
