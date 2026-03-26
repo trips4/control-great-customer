@@ -13,12 +13,14 @@ class profile::base {
     }
     'windows': {
       include profile::cis::assessor
-      dsc_userrightsassignment { 'Deny log on through Remote Desktop Services to Guests and Local Accounts':
-        ensure     => 'present',
-        user_right => 'SeDenyRemoteInteractiveLogonRight',
-        users      => ['Builtin\Guests'],
-        groups     => [],
-        provider   => 'powershell',
+
+      dsc_userrightsassignment { 'deny_rdp_guests_contractors':
+        dsc_policy   => 'Deny_log_on_through_Remote_Desktop_Services',
+        dsc_identity => [
+          'BUILTIN\Guests',
+          'DOMAIN\Contractors',
+        ],
+        dsc_ensure   => 'Present',
       }
     }
     default: {
