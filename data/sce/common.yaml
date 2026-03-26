@@ -17,4 +17,4 @@ sce_windows::config:
   level: '1'
   control_configs:
     ensure_deny_log_on_through_remote_desktop_services_is_set_to_guests_local_account_ms_only:
-      users: ["Builtin\\Guests"]
+      users: ['Builtin\Guests']
