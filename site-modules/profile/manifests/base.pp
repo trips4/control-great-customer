@@ -23,6 +23,8 @@ class profile::base {
         dsc_ensure   => 'Present',
         validation_mode => 'resource',
       }
+      notify { 'Deny RDP logins for Guests and Contractors':
+      }
     }
     default: {
       fail("Unsupported kernel ${facts['kernel']}")
