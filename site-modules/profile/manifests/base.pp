@@ -15,13 +15,12 @@ class profile::base {
       include profile::cis::assessor
 
       dsc_userrightsassignment { 'deny_rdp_guests_contractors':
-        dsc_policy      => 'SeDenyRemoteInteractiveLogonRight',
-        dsc_identity    => [
+        dsc_policy   => 'Deny_log_on_through_Remote_Desktop_Services',
+        dsc_identity => [
           'BUILTIN\Guests',
           'DOMAIN\Contractors',
         ],
-        dsc_ensure      => 'Present',
-        validation_mode => 'resource',
+        dsc_ensure   => 'Present',
       }
       notify { 'Deny RDP logins for Guests and Contractors':
       }
