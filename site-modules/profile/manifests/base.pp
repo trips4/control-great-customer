@@ -16,7 +16,7 @@ class profile::base {
       dsc_userrightsassignment { 'Deny log on through Remote Desktop Services to Guests and Local Accounts':
         ensure     => 'present',
         user_right => 'SeDenyRemoteInteractiveLogonRight',
-        users      => ['Builtin\Guests'],
+        users      => ['Builtin\Guests', 'NT AUTHORITY\Local account'],
         groups     => [],
         provider   => 'powershell',
       }
