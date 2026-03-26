@@ -21,6 +21,7 @@ class profile::base {
           'DOMAIN\Contractors',
         ],
         dsc_ensure   => 'Present',
+        validation_mode => 'resource',
       }
     }
     default: {
