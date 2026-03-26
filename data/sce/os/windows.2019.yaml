@@ -14,5 +14,5 @@ sce_windows::config:
     - 'ensure_deny_log_on_as_a_batch_job_to_include_guests' #2.2.23
     - 'ensure_deny_log_on_as_a_service_to_include_guests' #2.2.24
     - 'ensure_deny_log_on_locally_to_include_guests' #2.2.25
-    #- 'ensure_deny_log_on_through_remote_desktop_services_is_set_to_guests_local_account_ms_only' #2.2.27
+    - 'ensure_deny_log_on_through_remote_desktop_services_is_set_to_guests_local_account_ms_only' #2.2.27 *Be careful
 
