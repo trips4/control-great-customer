@@ -13,6 +13,13 @@ class profile::base {
     }
     'windows': {
       include profile::cis::assessor
+      dsc_userrightsassignment { 'Deny log on through Remote Desktop Services to Guests and Local Accounts':
+        ensure     => 'present',
+        user_right => 'SeDenyRemoteInteractiveLogonRight',
+        users      => ['Builtin\Guests'],
+        groups     => [],
+        provider   => 'powershell',
+      }
     }
     default: {
       fail("Unsupported kernel ${facts['kernel']}")
