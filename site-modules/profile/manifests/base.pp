@@ -6,7 +6,7 @@ class profile::base {
       # This was to fix an issue with the openssh-server package on Ubuntu 22.04 Desktop.
       # It was not being installed by the openssh module, and this is a workaround to ensure it is present.
       package { 'openssh-server':
-        ensure => 'absent',
+        ensure => 'present',
       }
       include profile::cis::assessor
       #include profile::firewalld
