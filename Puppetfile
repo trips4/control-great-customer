@@ -34,7 +34,7 @@ mod 'puppet-archive', '8.1.0'
 #mod 'puppetlabs-stdlib', '9.7.0'
 mod 'puppetlabs-chocolatey', '8.0.3'
 mod 'puppetlabs-powershell', '6.1.0'
-mod 'puppetlabs-pwshlib', '2.0.0'
+mod 'puppetlabs-pwshlib', '1.2.3'
 #mod 'puppetlabs-inifile', '6.2.0'
 mod 'puppetlabs-ruby_task_helper', '1.0.0'
 
@@ -48,8 +48,16 @@ mod 'dsc-auditpolicydsc', '1.4.0-0-9'
 mod 'dsc-securitypolicydsc', '2.10.0-0-9'
 #mod 'puppetlabs-powershell', '6.1.0'
 
+# mod 'bginfo',
+#  git:    'git@github.com:trips4/bginfo.git',
+#  branch: 'feature_install'
+
 mod 'bginfo',
  git:    'git@github.com:trips4/bginfo.git',
+ branch: :control_branch,
+ default_branch: 'main'
+
+mod 'klabsystems-dead_code_detector', '0.1.0'
  branch: 'feature_install'
 
 mod 'puppetlabs-cd4pe', '3.4.0'

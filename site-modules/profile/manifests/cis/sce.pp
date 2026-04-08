@@ -21,4 +21,6 @@ class profile::cis::sce (
       }
     }
   }
+  notify { "SCE compliance enforcement is set to ${enforce} for ${facts['os']['name']}" :
+  }
 }

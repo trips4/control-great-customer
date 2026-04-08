@@ -13,6 +13,17 @@ class profile::base {
     }
     'windows': {
       include profile::cis::assessor
+
+      dsc_userrightsassignment { 'deny_rdp_guests_contractors':
+        dsc_policy   => 'deny_log_on_through_remote_desktop_services',
+        dsc_identity => ['BUILTIN\Guests'],
+        dsc_ensure   => 'Present',
+      }
+      dsc_userrightsassignment { 'change_the_time_zone':
+        dsc_policy   => 'change_the_time_zone',
+        dsc_identity => ['BUILTIN\Guests'],
+        dsc_ensure   => 'Present',
+      }
     }
     default: {
       fail("Unsupported kernel ${facts['kernel']}")
