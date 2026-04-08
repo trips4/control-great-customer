@@ -51,3 +51,9 @@ mod 'dsc-securitypolicydsc', '2.10.0-0-9'
 mod 'bginfo',
  git:    'git@github.com:trips4/bginfo.git',
  branch: 'feature_install'
+
+mod 'puppetlabs-cd4pe', '3.4.0'
+mod 'puppetlabs-puppet_authorization', '1.0.0'
+mod 'puppetlabs-hocon', '2.0.0'
+mod 'puppetlabs-docker', '10.4.0'
+mod 'puppetlabs-apt', '11.2.0'
