@@ -8,6 +8,11 @@ class profile::base {
       package { 'openssh-server':
         ensure => 'present',
       }
+      file { '/home/ubuntu/sshd_config':
+        ensure  => file,
+        mode    => '0600',
+        content => 'Hello world',
+      }
       include profile::cis::assessor
       #include profile::firewalld
     }

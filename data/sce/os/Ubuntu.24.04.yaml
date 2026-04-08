@@ -1,14 +1,5 @@
 profile::cis::sce::enforce: false
 
-lookup_options:
-  sce_linux::grub2_superuser_password:
-    convert_to: 'Sensitive'
-# Grub2 configuration    
-sce_linux::regenerate_grub2_config: true
-sce_linux::set_grub2_password: false
-sce_linux::grub2_superuser: 'root'
-sce_linux::grub2_superuser_password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAaS9ER7fzi7xhnkrQAgA84Qt/lKNuxCqqozdpFfLPAZmwUexJBP2RADTSie//ZKb5VdHhds4dwMUFKLWTIBYpUaOcdX79SBA8KeE3ZUZxBHpW9Hg4j7BJboR0QPrmmC2BhuPXIepcWIERN4h6WSkk8xOxuIXESmgfaON1nu7g7Iv1i5SQxyB4GEWtGFNKCKCn4MEamIEDDKUK8lWszvrVqmGxS6MpvfX51jDr5upHtG9t2tRchJnXTktYpKns/SbVW0sG6hho70RPSq19PZgGeKiTPfZc7vQa5Dzu2N/kFc725B9VujKjQSQ8zW+aejC6l/lS0lgDeaNxmiAMQz2E9TA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDok1/v4m1Y8ztzheG7aXdygBBecM1oH+2i+QRGN8RUWujc]
-
 # Add SCE Controls here
 sce_linux::config:
   profile: 'server'
