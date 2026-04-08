@@ -58,7 +58,6 @@ mod 'bginfo',
  default_branch: 'main'
 
 mod 'klabsystems-dead_code_detector', '0.1.0'
- branch: 'feature_install'
 
 mod 'puppetlabs-cd4pe', '3.4.0'
 mod 'puppetlabs-puppet_authorization', '1.0.0'
