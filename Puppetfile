@@ -56,3 +56,5 @@ mod 'bginfo',
  git:    'git@github.com:trips4/bginfo.git',
  branch: :control_branch,
  default_branch: 'main'
+
+mod 'klabsystems-dead_code_detector', '0.1.0'
