@@ -20,7 +20,7 @@ The important files and items in this template are as follows:
   * These match the default hierarchy that ships with PE.
 * An [environment.conf](https://puppet.com/docs/puppet/7/config_file_environment.html) that correctly implements:
   * A site-modules directory for roles, profiles, and any custom modules for your organization.
-  * A config\_version script.
+  * A config\_version script. 
 * An example [config\_version](https://puppet.com/docs/puppet/7/config_file_environment.html#environment-conf-allowed-settings) script that outputs the git commit ID of the code that was used during a Puppet run.
 
 Here's a visual representation of the structure of this repository:
