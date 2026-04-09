@@ -23,7 +23,7 @@ jobs:
                   CD_WEBHOOK_URL: http://lab1-cd01.triplo.psedemos.com:8000/github/push?apiToken=
                   # Token portion of the webhook URL
                   # e.g. zczhz5cUTRfuZAMWNs9Z9zmlUUuBPW6e
-                  CD_TOKEN: ${{ secrets.CD4PE_TOKEN }}
+                  CD_TOKEN: ${{ secrets.Great_Cust_CD4PE_TOKEN }}
                   EVENT_TYPE: ${{ github.event_name }}
               run: |
                   curl -X POST "${CD_WEBHOOK_URL}${CD_TOKEN}" \
